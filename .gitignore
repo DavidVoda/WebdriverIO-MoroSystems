@@ -130,3 +130,7 @@ dist
 
 # Idea
 .idea
+
+# Allure report
+allure-report
+allure-results
