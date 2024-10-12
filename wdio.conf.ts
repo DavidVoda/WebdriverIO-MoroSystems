@@ -63,7 +63,10 @@ export const config: WebdriverIO.Config = {
         {
             browserName: 'chrome',   // or 'chromium'
             'goog:chromeOptions': {
-                args: ['headless', 'disable-gpu', 'disable-dev-shm-usage', 'disable-setuid-sandbox', 'no-sandbox']
+                args: ['headless', 'disable-gpu', 'disable-dev-shm-usage', 'disable-setuid-sandbox', 'no-sandbox'],
+                prefs: {
+                    'intl.accept_languages': 'cs-CZ'
+                }
             }
         }
     ],
