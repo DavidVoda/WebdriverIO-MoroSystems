@@ -15,7 +15,7 @@ describe('MoroSystems test example', () => {
         //Google
         await googlePage.openPage()
 
-        await googlePage.denyCookiesButton().click()
+        // await googlePage.denyCookiesButton().click()
         await googlePage.inputSearch().setValue('MoroSystems')
         await googlePage.searchButton().click()
 
@@ -23,7 +23,7 @@ describe('MoroSystems test example', () => {
         await googlePage.moroSystemsLink().click()
 
         //MoroSystems
-        await moroSystemsPage.denyCookies().click()
+        // await moroSystemsPage.denyCookies().click()
         await moroSystemsPage.careerLink().waitForClickable()
         await moroSystemsPage.careerLink().click()
         await expect(browser).toHaveUrl('https://www.morosystems.cz/kariera/')
