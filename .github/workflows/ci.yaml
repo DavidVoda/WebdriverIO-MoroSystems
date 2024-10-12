@@ -40,12 +40,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-
-#      - name: Generate Allure report
-#        if: always()
-#        run: allure --version
-#      - uses: actions/upload-artifact@v4
-#        if: always()
-#        with:
-#          name: allure-results
-#          path: allure-results

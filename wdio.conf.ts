@@ -60,15 +60,15 @@ export const config: WebdriverIO.Config = {
                 args: [ 'disable-gpu', 'disable-dev-shm-usage', 'disable-setuid-sandbox', 'no-sandbox'],
                 prefs: {
                     'intl.accept_languages': 'cs-CZ',
-                    profile: {
-                        default_content_setting_values: { cookies: 2 },
-                        block_third_party_cookies: true
-                    },
-                    network: {
-                        cookie: {
-                            cookieBehavior: 2
-                        }
-                    }
+                    // profile: {
+                    //     default_content_setting_values: { cookies: 2 },
+                    //     block_third_party_cookies: true
+                    // },
+                    // network: {
+                    //     cookie: {
+                    //         cookieBehavior: 2
+                    //     }
+                    // }
                 }
             }
         }
