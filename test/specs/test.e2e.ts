@@ -17,7 +17,7 @@ describe('MoroSystems test example', () => {
 
         // await googlePage.denyCookiesButton().click()
         await googlePage.inputSearch().setValue('MoroSystems CZ')
-        await browser.keys('enter')
+        await browser.keys('Enter')
         // await googlePage.searchButton().click()
 
         await expect(googlePage.moroSystemsLink()).toExist()
