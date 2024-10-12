@@ -1,9 +1,9 @@
 # WebdriverIO-MoroSystems
-- This is an example of webdriverIO test for Morosystems
-- This project has set up github action which generates allure report:
-[Github Actions](https://github.com/DavidVoda/WebdriverIO-MoroSystems/actions/workflows/ci.yaml?query=branch%3Amain)
+- This is an example of webdriverIO test for MoroSystems
+- This project has set up GitHub action which generates allure report:
+[GitHub Actions](https://github.com/DavidVoda/WebdriverIO-MoroSystems/actions/workflows/ci.yaml?query=branch%3Amain)
 - Allure report can be seen here:
-[Allure report](https://davidvoda.github.io/WebdriverIO-MoroSystems/21/index.html)
+[Allure report](https://davidvoda.github.io/WebdriverIO-MoroSystems)
 ## Prerequisites
 - node
 
