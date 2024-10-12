@@ -15,16 +15,13 @@ describe('MoroSystems test example', () => {
         //Google
         await googlePage.openPage()
 
-        // await googlePage.denyCookiesButton().click()
         await googlePage.inputSearch().setValue('MoroSystems CZ')
         await browser.keys('Enter')
-        // await googlePage.searchButton().click()
 
         await expect(googlePage.moroSystemsLink()).toExist()
         await googlePage.moroSystemsLink().click()
 
         //MoroSystems
-        // await moroSystemsPage.denyCookies().click()
         await moroSystemsPage.careerLink().waitForClickable()
         await moroSystemsPage.careerLink().click()
         await expect(browser).toHaveUrl('https://www.morosystems.cz/kariera/')

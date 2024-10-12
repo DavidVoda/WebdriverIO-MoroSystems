@@ -6,7 +6,6 @@ export default class GooglePage {
     searchButton = () => $('input[name="btnK"]')
 
     moroSystemsLink = () => $('a[href="https://www.morosystems.cz/"]')
-    // moroSystemsLink = () => $('header').$('*=MoroSystems')
 
     openPage = () => {
         return browser.navigateTo('https://google.com');
