@@ -9,12 +9,6 @@ export const config: WebdriverIO.Config = {
     runner: 'local',
     tsConfigPath: './tsconfig.json',
 
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
-    }]],
-
     //
     // ==================
     // Specify Test Files
@@ -63,9 +57,18 @@ export const config: WebdriverIO.Config = {
         {
             browserName: 'chrome',   // or 'chromium'
             'goog:chromeOptions': {
-                args: ['headless', 'disable-gpu', 'disable-dev-shm-usage', 'disable-setuid-sandbox', 'no-sandbox'],
+                args: [ 'disable-gpu', 'disable-dev-shm-usage', 'disable-setuid-sandbox', 'no-sandbox'],
                 prefs: {
-                    'intl.accept_languages': 'cs-CZ'
+                    'intl.accept_languages': 'cs-CZ',
+                    profile: {
+                        default_content_setting_values: { cookies: 2 },
+                        block_third_party_cookies: true
+                    },
+                    network: {
+                        cookie: {
+                            cookieBehavior: 2
+                        }
+                    }
                 }
             }
         }
@@ -143,6 +146,11 @@ export const config: WebdriverIO.Config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     // reporters: ['dot'],
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
